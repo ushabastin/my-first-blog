@@ -2,8 +2,20 @@
     <head>
         <title>River Periyar Water Quality</title>
     </head>
-    <h1>Real-Time Water Analysis</h1>
+   
     <body>
+     <div>
+         <h1>Real-Time Water Analysis</h1>
+     </div>
+     {% for post in posts %}
+     <div>
+         
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+         
+     </div>
+     {% endfor %}
     <p>River Water Quality Testing!</p>
     <p>Data Loading...</p>
     </body>
